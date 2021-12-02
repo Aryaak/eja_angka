@@ -1,14 +1,34 @@
-// PROGRAM EJA ANGKA 4 DIGIT
+// PROGRAM PENGEJA ANGKA 4 DIGIT
 
 
 #include <iostream>
 
 using namespace std;
 
+// Buat fungsi untuk validasi
+bool validasi (int angka){
+    
+    bool hasil = true;
+    
+    // Cek digit angka
+    if (angka > 9999){
+        cout << "Angka harus terdiri dari 1-4 digit!" << endl;
+        hasil = false;
+    }
+    
+    
+    return hasil;
+    
+}
+
 // Buat fungsi untuk eja angka
-string
-eja (int angka)
+string eja (int angka)
 {
+    
+  // validasi angka
+  if (!validasi(angka)){
+      return "";
+  }
 
   // Buat variabel untuk menyimpan angka mulai satuan sampai ribuan
   int satuan, belasan, puluhan, ratusan, ribuan;
@@ -80,17 +100,32 @@ eja (int angka)
   return "";
 }
 
-int
-main ()
+
+int main ()
 {
+  cout << "======================= PROGRAM PENGEJA ANGKA 1-4 DIGIT =======================" << endl;
+  
+  cout << "============================ Created by Arya Rizky ===========================" << endl << endl;
+    
+  // label start   
+  mulai:
+    
   // Buat variabel untuk menyimpan masukan angka
   int angka;
 
-  // Masukan angka    
+  // Masukan angka
+  cout << "Masukan angka (1-4 digit): ";
   cin >> angka;
+  
+  cout << endl;
 
   // Panggil fungsi eja dengan mengirimkan variabel angka sebagai parameter
   eja (angka);
-
+  
+  
+  // kembali ke awal dengan goto
+  goto mulai;
+  
   return 0;
 }
+
