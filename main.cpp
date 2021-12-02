@@ -12,7 +12,7 @@ bool validasi (int angka){
     
     // Cek digit angka
     if (angka > 9999){
-        cout << "Angka harus terdiri dari 1-4 digit!" << endl;
+        cout << "Angka harus terdiri dari 1-4 digit!";
         hasil = false;
     }
     
@@ -105,7 +105,7 @@ int main ()
 {
   cout << "======================= PROGRAM PENGEJA ANGKA 1-4 DIGIT =======================" << endl;
   
-  cout << "============================ Created by Arya Rizky ===========================" << endl << endl;
+  cout << "============================ Created by Arya Rizky ============================" << endl << endl;
     
   // label start   
   mulai:
@@ -122,10 +122,12 @@ int main ()
   // Panggil fungsi eja dengan mengirimkan variabel angka sebagai parameter
   eja (angka);
   
+  cout << endl << endl << endl;
   
   // kembali ke awal dengan goto
   goto mulai;
   
   return 0;
 }
+
 
